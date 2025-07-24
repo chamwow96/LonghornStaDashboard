@@ -46,16 +46,6 @@ longhorns_dashboard/
 
 **NEVER** hardcode your API key in Python files.
 
-### ✅ Recommended Practice
-
-- In `fetch_api_data.py`, load your API key securely:
-
-```python
-import os
-API_KEY = os.getenv("LONGHORNS_API_KEY")
-
-
-
 ---
 
 ### 📊 ****Planned Visualizations****
