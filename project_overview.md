@@ -71,6 +71,15 @@ Defining what the dashboard should show:
 - [ ] Opponent comparison charts
 - [ ] Game summaries with box scores
 
+# Other Stats to Include
+
+General: AP Poll | WL Record | Next Matchup | Betting Odds for Next Matchup
+Offense: national ranking | YPG | PPG | Advanced Offense stat
+Defense: national ranking | YPG | PPG | advanced defense stat
+Player highlights: Arch Manning QBR | Arch Manning Heisman Odds | Trey Wingo TDs | Simmons Sacks | Kicker FG%
+Havoc: turnover margin | sacks | INTs | fumbles
+
+
 ## 🛠️ Dev Tasks
 
 - [ ] Set up project folder structure
