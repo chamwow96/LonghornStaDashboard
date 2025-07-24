@@ -58,7 +58,7 @@ API_KEY = os.getenv("LONGHORNS_API_KEY")
 
 ---
 
-### 📊 **Planned Visualizations**
+### 📊 ****Planned Visualizations****
 Defining what the dashboard should show:
 
 ## 📊 Planned Visualizations
