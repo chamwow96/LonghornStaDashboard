@@ -56,12 +56,17 @@ def main():
             return row.iloc[0]['statValue']
         return None
 
+    record_df = None
+    if 'record_by_week' in data:
+        record_df = pd.DataFrame(data['record_by_week'])
+
     if page == "Team Record by Week":
         st.header("Team Record by Week (W/L)")
-        if 'record_by_week' in data:
-            record_df = pd.DataFrame(data['record_by_week'])
+        if record_df is not None and all(col in record_df.columns for col in ['W', 'L']):
             st.line_chart(record_df[['W', 'L']].astype(int))
             st.dataframe(record_df)
+        else:
+            st.info("No W/L data available.")
 
     elif page == "QBR & Player Highlights":
         st.header("QBR Rating of Starting QB & Player Highlights")
@@ -104,7 +109,10 @@ def main():
         st.header("General & Advanced Stats")
         st.subheader("General")
         st.write("AP Poll:", get_stat("apPoll"))
-        st.write("W/L Record:", f"{record_df['W'].sum()}-{record_df['L'].sum()}" if 'record_by_week' in data else "N/A")
+        if record_df is not None and all(col in record_df.columns for col in ['W', 'L']):
+            st.write("W/L Record:", f"{record_df['W'].sum()}-{record_df['L'].sum()}")
+        else:
+            st.write("W/L Record: N/A")
         st.write("Next Matchup:", get_stat("nextMatchup"))
         st.write("Betting Odds for Next Matchup:", get_stat("bettingOddsNextMatchup"))
         st.subheader("Offense")
