@@ -2,12 +2,8 @@
 pandas>=2.0.0
 requests>=2.31.0
 python-dotenv>=1.0.0
-streamlit
-pandas
-requests
-python-dotenv
-# Dashboard UI
 streamlit>=1.30.0
+cfbd>=4.6.7
 
 # Optional (if parsing nested JSON or scheduling)
 schedule>=1.2.0  # Optional: for testing cron-like jobs locally

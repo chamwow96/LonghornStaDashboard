@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+longhorns_dashboard/.env
+longhorns_dashboard/data/*.json
+.DS_Store
